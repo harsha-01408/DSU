@@ -69,3 +69,58 @@ E = 75
 
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+A rider is about to start an Uber trip and needs to enter an OTP (One-Time Password)
+to initiate the ride. The exact OTP required is unknown to the rider, but they are
+provided with a list of n non-empty OTPs, each consisting of lowercase English
+letters.
+
+To guarantee starting the Uber trip, the rider needs to enter the correct OTP, or
+any OTP that is considered equivalent to it. Determine the minimum number of OTPs
+the rider must attempt to ensure they can start the trip, while minimizing the
+number of OTPs tried.
+
+Two OTPs A and B are considered equivalent if:
+
+- There is at least one common character between A and B, OR
+- There exists an OTP C in the list such that A is equivalent to C and B is
+  equivalent to C (i.e., equivalence is transitive through chains of shared
+  characters).
+
+Input
+- An integer n (1 ≤ n ≤ 10^4): the number of OTPs.
+- A list of n strings: each string represents an OTP, consisting only of lowercase
+  English letters 'a'–'z' with maximum length 50.
+
+Output
+- An integer representing the minimum number of OTPs the rider needs to try in
+  order to guarantee that the trip can be initiated.
+
+Example 1
+Input:
+4
+["a", "b", "ab", "d"]
+
+Output:
+2
+
+Explanation:
+- OTPs "a", "b", and "ab" are equivalent because they can be connected through
+  shared characters.
+- OTP "d" is isolated and not equivalent to any of the others.
+Thus there are 2 equivalence groups, so the rider must try at least 2 OTPs.
+
+Example 2
+Input:
+1
+["uber"]
+
+Output:
+1
+
+Explanation:
+- There is only one OTP provided, "uber". The rider must attempt this OTP.
+So the minimum number of OTPs to try is 1.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
