@@ -124,3 +124,30 @@ Explanation:
 So the minimum number of OTPs to try is 1.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+The country is a 2D coordinate grid with n servers. The i-th server is at (x[i], y[i]).
+
+You may connect any two servers i and j. The cost of connecting them is:
+cost(i, j) = min(|x[i] - x[j]|, |y[i] - y[j]|)
+
+Choose a set of connections so that the network is fully connected, i.e., every server
+is reachable from every other server (directly or through other servers).
+
+Return the minimum possible total cost to make the network connected.
+
+Function:
+int getMinCost(vector<int> x, vector<int> y)
+
+Input:
+- x: array of x-coordinates
+- y: array of y-coordinates
+
+Output:
+- minimum total cost to connect all servers
+
+Constraints:
+- 2 <= n <= 100000
+- 0 <= x[i], y[i] <= 1000000000
+- Multiple servers may have the same coordinates
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
