@@ -151,3 +151,53 @@ Constraints:
 - Multiple servers may have the same coordinates
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given:
+• An integer N
+• M pairs of different lowercase English letters
+
+Each given pair (u, v) indicates that u and v are “related”.
+This relation is transitive: if (u, v) is related and (v, w) is related, then (u, w)
+is also considered related.
+Any two related characters are not allowed to appear next to each other in the
+string.
+
+Task
+Find the number of strings of length N (using letters a–z) such that the string
+does NOT contain any adjacent pair of related characters. Since the answer can be
+very large, print it modulo (10^9 + 7).
+
+Example
+Assumptions:
+• N = 2
+• M = 3
+• Pairs = {(a, b), (b, c), (c, d)}
+
+Explanation (idea):
+• From (a, b) and (b, c), transitivity implies (a, c) is also related.
+• From (b, c) and (c, d), transitivity implies (b, d) is also related.
+• Overall, {a, b, c, d} becomes one related group, so any two different letters
+  among them cannot be adjacent.
+• Forbidden adjacent pairs include:
+  ab, ba, bc, cb, cd, dc, ac, ca, bd, db, ad, da
+• Total strings of length 2 = 26^2 = 676
+  Valid strings = 676 − 12 = 664
+
+Function description
+Complete the solve function. It receives:
+• N: length of the string to form
+• M: number of given pairs
+• Pairs: list of M pairs of distinct characters
+
+Input format
+• First line: integer T (number of test cases)
+• For each test case:
+  – First line: integer N
+  – Next line: integer M
+  – Next M lines: two distinct lowercase characters per line
+
+Output format
+• For each test case, print the number of valid strings modulo (10^9 + 7).
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
