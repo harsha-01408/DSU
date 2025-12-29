@@ -201,3 +201,23 @@ Output format
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Road Construction for Full Connectivity
+
+You are given N cities numbered 0 to N-1 and M existing roads. Some cities may not be reachable from others (the graph may be disconnected). The king wants to make the entire network fully connected, meaning every city should be reachable from every other city.
+
+To do this, the king is allowed to build at most K new roads. However, each new road must connect two cities whose numbers are odd.
+
+Your task is to check whether it is possible to add up to K such odd-to-odd roads so that the final graph becomes connected.
+
+Note: Multiple roads between the same pair of cities are allowed.
+
+Input
+- First line: N M K
+- Next M lines: U V (a road between U and V)
+
+Output
+Print "YES" if it is possible to make the graph connected under these rules, otherwise print "NO".
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
